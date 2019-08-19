@@ -1,0 +1,31 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://k8s-admin-registry:8761/eureka/
+  instance:
+    hostname: ${spring.application.name}
+feign:
+  hystrix:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 60000
+        readTimeout: 60000
+        loggerLevel: basic
+server:
+  port: 8080
+spring:
+  application:
+    name: k8s-admin-api-gateway
+  cloud:
+    inetutils:
+      timeoutSeconds: 30
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      enabled: true
+      routes:
+      default-filters:

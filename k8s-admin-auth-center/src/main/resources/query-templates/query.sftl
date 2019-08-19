@@ -1,0 +1,33 @@
+@---role-query-jpql
+SELECT r FROM RolePO r
+WHERE 1 = 1 
+<#if id??>
+	and r.id = :id
+</#if>
+<#if ids??>
+	and r.id in :ids
+</#if>
+<#if name??>
+	and r.name like :name
+</#if>
+
+@---role-query-jpql-by-ids
+SELECT r FROM RolePO r
+WHERE 1 = 1
+and r.id in :ids
+
+@---role-system-query-jpql-by-roleId-systemId
+SELECT rs FROM RoleSystemPO rs
+where 1=1
+<#if roleId??>
+	and rs.roleId = :roleId
+</#if>
+<#if systemId??>
+	and rs.systemId = :systemId
+</#if>
+<#if roleIds??>
+	and rs.roleId in :roleIds
+</#if>
+<#if systemIds??>
+	and rs.systemId in :systemIds
+</#if>

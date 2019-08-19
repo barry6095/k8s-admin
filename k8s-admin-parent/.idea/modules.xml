@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../agree-spring-data-extend-starter/agree-spring-data-extend-starter.iml" filepath="$PROJECT_DIR$/../agree-spring-data-extend-starter/agree-spring-data-extend-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../k8s-admin-api-gateway/k8s-admin-api-gateway.iml" filepath="$PROJECT_DIR$/../k8s-admin-api-gateway/k8s-admin-api-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../k8s-admin-auth-center/k8s-admin-auth-center.iml" filepath="$PROJECT_DIR$/../k8s-admin-auth-center/k8s-admin-auth-center.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../k8s-admin-common-resources/k8s-admin-common-resources.iml" filepath="$PROJECT_DIR$/../k8s-admin-common-resources/k8s-admin-common-resources.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../k8s-admin-dashboard/k8s-admin-dashboard.iml" filepath="$PROJECT_DIR$/../k8s-admin-dashboard/k8s-admin-dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/k8s-admin-parent.iml" filepath="$PROJECT_DIR$/k8s-admin-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../k8s-admin-registry/k8s-admin-registry.iml" filepath="$PROJECT_DIR$/../k8s-admin-registry/k8s-admin-registry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../k8s-admin-system/k8s-admin-system.iml" filepath="$PROJECT_DIR$/../k8s-admin-system/k8s-admin-system.iml" />
+    </modules>
+  </component>
+</project>

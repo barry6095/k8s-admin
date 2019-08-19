@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="k8s-admin-system:war">
+    <output-path>$PROJECT_DIR$/../k8s-admin-system/target</output-path>
+    <root id="archive" name="k8s-admin-system-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="k8s-admin-system:war exploded" />
+    </root>
+  </artifact>
+</component>

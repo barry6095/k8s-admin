@@ -1,0 +1,68 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://k8s-admin-registry:8761/eureka,
+  instance:
+    hostname: ${spring.application.name}
+security:
+  oauth2:
+    client:
+      access-token-uri: http://k8s-admin-auth-center:8083/oauth/token
+      client-secret: 123456
+      grant-type: client_credentials,password
+      id: task-executor
+      scope: server
+    resource:
+      user-info-uri: http://k8s-admin-auth-center:8083/user/current
+server:
+  port: 8093
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: k8s-admin-system
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      initial-size: 1
+      max-active: 100
+      max-open-prepared-statements: 50
+      max-pool-prepared-statement-per-connection-size: 20
+      max-wait: 60000
+      min-evictable-idle-time-millis: 300000
+      min-idle: 1
+      password: root123456
+      pool-prepared-statements: true
+      test-on-borrow: false
+      test-on-return: false
+      test-while-idle: true
+      time-between-eviction-runs-millis: 60000
+      url: jdbc:mysql://mysql-server:3306/task_flow
+      username: root
+      validation-query: select 'x'
+    name: druidDatasource
+    type: com.alibaba.druid.pool.DruidDataSource
+    data:
+    - classpath*:sql/mysql/data.sql
+    initialization-mode: always
+    sql-script-encoding: UTF-8
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL55Dialect
+    show-sql: true
+  messages:
+    cache-duration: 3600
+    encoding: UTF-8
+  cloud:
+    inetutils:
+      timeoutSeconds: 30
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 60000
+        readTimeout: 60000
+        loggerLevel: basic

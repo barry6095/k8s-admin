@@ -1,0 +1,6 @@
+@---system-query-jpql
+SELECT s FROM SystemPO s
+WHERE 1 = 1 
+<#if id??>
+	and s.id = :id
+</#if>

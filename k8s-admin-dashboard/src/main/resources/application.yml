@@ -1,0 +1,25 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://k8s-admin-registry:8761/eureka
+    fetch-registry: true
+  instance:
+    hostname: ${spring.application.name}
+server:
+  port: 8088
+spring:
+  application:
+    name: k8s-admin-dashboard
+  main:
+    allow-bean-definition-overriding: true
+
+  cloud:
+    inetutils:
+      timeoutSeconds: 30
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 60000
+        readTimeout: 60000
+        loggerLevel: basic

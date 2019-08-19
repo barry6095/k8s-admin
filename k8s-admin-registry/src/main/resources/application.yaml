@@ -1,0 +1,16 @@
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    serviceUrl:
+      defaultZone: http://k8s-admin-registry:8761/eureka/
+  instance:
+    hostname: ${spring.application.name}
+server:
+  port: 8761
+spring:
+  application:
+    name: k8s-admin-registry
+  cloud:
+    inetutils:
+      timeoutSeconds: 30
